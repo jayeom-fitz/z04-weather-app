@@ -9,23 +9,27 @@ const API_KEY = "3fbb90dddb217cfc9d5815d9df974453";
 
 export default class extends React.Component {
   state = {
-    isLoading: true,
-    temp: 0,
-
+    isLoading: true
   };
   
   getWeather = async (latitude, longitude) => {
     try {
-      const {data} = await axios.get(
+      const {
+        data: {
+          main: {temp},
+          weather
+        }
+      } = await axios.get(
         `http://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${API_KEY}&units=metric`
       );
-      console.log(data);
       this.setState({
         isLoading: false,
-        temp: data.main.temp
+        condition: weather[0].main,
+        temp
       });
     } catch(error) {
-      Alert.alert("Error.");
+      console.log(error);
+      Alert.alert("[ Error ]");
     }
   };
   
@@ -46,7 +50,14 @@ export default class extends React.Component {
   }
 
   render() {
-    const { isLoading, temp } = this.state;
-    return isLoading ? <Loading /> : <Weather temp={Math.floor(temp)} /> ;
+    const { isLoading, temp, condition } = this.state;
+    return isLoading ? (
+      <Loading /> 
+    ) : (
+      <Weather 
+        temp={Math.round(temp)} 
+        condition={condition} 
+      />
+    );
   };
 }
