@@ -7,31 +7,31 @@ import { MaterialCommunityIcons  } from "@expo/vector-icons";
 const weatherOptions = {
   Thunderstorm: {
     iconName: "weather-lightning",
-    gradient: "",
+    gradient: ["#00416A", "#799F0C", "#FFE000"],
     mention: ""
   },
   Drizzle: {
     iconName: "weather-pouring",
-    gradient: "",
+    gradient: ["#2193b0", "#2193b0"],
     mention: ""
   },
   Rain: {
     iconName: "weather-rainy",
-    gradient: "",
+    gradient: ["#a8c0ff", "#3f2b96"],
     mention: ""
   },
   Snow: {
     iconName: "weather-snowy",
-    gradient: "",
+    gradient: ["#bdc3c7", "#2c3e50"],
     mention: ""
   },
   Mist: {
-    iconName: "",
-    gradient: "",
+    iconName: "weather-fog",
+    gradient: ["#8e9eab", "#eef2f3"],
     mention: ""
   },
   Smoke: {
-    iconName: "",
+    iconName: "weather-fog",
     gradient: "",
     mention: ""
   },  
@@ -41,43 +41,43 @@ const weatherOptions = {
     mention: ""
   },
   Dust: {
-    iconName: "",
-    gradient: "",
+    iconName: "weather-hazy",
+    gradient: ["#636363", "#a2ab58"],
     mention: ""
   },
   Fog: {
     iconName: "weather-fog",
-    gradient: "",
+    gradient: ["#8e9eab", "#eef2f3"],
     mention: ""
   },
   Sand: {
-    iconName: "",
-    gradient: "",
+    iconName: "weather-hazy",
+    gradient: ["#666600", "#999966"],
     mention: ""
   },
   Ash: {
-    iconName: "",
-    gradient: "",
+    iconName: "weather-hazy",
+    gradient: ["#606c88", "#3f4c6b"],
     mention: ""
   },
   Squall: {
     iconName: "weather-hail",
-    gradient: "",
+    gradient: ["#0f0c29", "#504b83", "#44445e"],
     mention: ""
   },
   Tornado: {
     iconName: "weather-tornado",
-    gradient: "",
+    gradient: ["#000000", "#777777", "#333333"],
     mention: ""
   },
   Clear: {
     iconName: "weather-sunny",
-    gradient: "",
+    gradient:  ["#f12711", "#f5af19"],
     mention: ""
   },
   Clouds: {
     iconName: "weather-cloudy",
-    gradient: "",
+    gradient: ["#2c3e50", "#bdc3c7"],
     mention: ""
   }
 };
@@ -136,5 +136,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
-  }
+  },
+
+  title: {
+    color: 'white',
+    fontWeight: "500",
+    fontSize: 36,
+  },
+
+  subtitle: {
+    color: 'white',
+    fontWeight: "300",
+    fontSize: 24,
+  },
 });
