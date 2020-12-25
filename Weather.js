@@ -8,38 +8,38 @@ const weatherOptions = {
   Thunderstorm: {
     iconName: "weather-lightning",
     gradient: ["#373B44", "#4286f4"],
-    title: "",
-    subtitle: ""
+    title: "Thunderstorm in the house",
+    subtitle: "Actually, outside of the house"
   },
   Drizzle: {
     iconName: "weather-pouring",
     gradient: ["#89F7FE", "#66A6FF"],
-    title: "",
-    subtitle: ""
+    title: "Drizzle",
+    subtitle: "Is like rain"
   },
   Rain: {
     iconName: "weather-rainy",
     gradient: ["#00C6FB", "#005BEA"],
-    title: "",
-    subtitle: ""
+    title: "Raining like a MF",
+    subtitle: "For more info look outside"
   },
   Snow: {
     iconName: "weather-snowy",
     gradient: ["#7DE2FC", "#B9B6E5"],
-    title: "",
-    subtitle: ""
+    title: "Cold as balls",
+    subtitle: "Do you want to build a snowman? Fuck no."
   },
   Mist: {
     iconName: "weather-fog",
     gradient: ["#4DA0B0", "#D39D38"],
-    title: "",
-    subtitle: ""
+    title: "Mist!",
+    subtitle: "It's like you have no glasses on."
   },
   Smoke: {
     iconName: "weather-fog",
     gradient: ["#8e9eab", "#eef2f3"],
-    title: "",
-    subtitle: ""
+    title: "Smoke",
+    subtitle: "..."
   },  
   Haze: {
     iconName: "weather-hazy",
@@ -50,50 +50,50 @@ const weatherOptions = {
   Dust: {
     iconName: "weather-hazy",
     gradient: ["#4DA0B0", "#D39D38"],
-    title: "",
-    subtitle: ""
+    title: "Dusty",
+    subtitle: "Thanks a lot China 🖕🏻"
   },
   Fog: {
     iconName: "weather-fog",
     gradient: ["#8e9eab", "#eef2f3"],
-    title: "",
-    subtitle: ""
+    title: "Fog",
+    subtitle: "..."
   },
   Sand: {
     iconName: "weather-hazy",
     gradient: ["#666600", "#999966"],
-    title: "",
-    subtitle: ""
+    title: "Sand",
+    subtitle: "Thanks a lot China 🖕🏻"
   },
   Ash: {
     iconName: "weather-hazy",
     gradient: ["#606c88", "#3f4c6b"],
-    title: "",
-    subtitle: ""
+    title: "Ash",
+    subtitle: "..."
   },
   Squall: {
     iconName: "weather-hail",
     gradient: ["#0f0c29", "#504b83", "#44445e"],
-    title: "",
-    subtitle: ""
+    title: "Squall",
+    subtitle: "..."
   },
   Tornado: {
     iconName: "weather-tornado",
     gradient: ["#000000", "#777777", "#333333"],
-    title: "",
-    subtitle: ""
+    title: "Tornado",
+    subtitle: "Is it Real...?"
   },
   Clear: {
     iconName: "weather-sunny",
     gradient:  ["#FF7300", "#FEF253"],
-    title: "",
-    subtitle: ""
+    title: "Sunny as fuck",
+    subtitle: "Go get your ass burnt"
   },
   Clouds: {
     iconName: "weather-cloudy",
     gradient: ["#D7D2CC", "#304352"],
-    title: "",
-    subtitle: ""
+    title: "Clouds",
+    subtitle: "I know, fucking boring"
   }
 };
 
