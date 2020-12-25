@@ -7,78 +7,93 @@ import { MaterialCommunityIcons  } from "@expo/vector-icons";
 const weatherOptions = {
   Thunderstorm: {
     iconName: "weather-lightning",
-    gradient: ["#00416A", "#799F0C", "#FFE000"],
-    mention: ""
+    gradient: ["#373B44", "#4286f4"],
+    title: "",
+    subtitle: ""
   },
   Drizzle: {
     iconName: "weather-pouring",
-    gradient: ["#2193b0", "#2193b0"],
-    mention: ""
+    gradient: ["#89F7FE", "#66A6FF"],
+    title: "",
+    subtitle: ""
   },
   Rain: {
     iconName: "weather-rainy",
-    gradient: ["#a8c0ff", "#3f2b96"],
-    mention: ""
+    gradient: ["#00C6FB", "#005BEA"],
+    title: "",
+    subtitle: ""
   },
   Snow: {
     iconName: "weather-snowy",
-    gradient: ["#bdc3c7", "#2c3e50"],
-    mention: ""
+    gradient: ["#7DE2FC", "#B9B6E5"],
+    title: "",
+    subtitle: ""
   },
   Mist: {
     iconName: "weather-fog",
-    gradient: ["#8e9eab", "#eef2f3"],
-    mention: ""
+    gradient: ["#4DA0B0", "#D39D38"],
+    title: "",
+    subtitle: ""
   },
   Smoke: {
     iconName: "weather-fog",
-    gradient: "",
-    mention: ""
+    gradient: ["#8e9eab", "#eef2f3"],
+    title: "",
+    subtitle: ""
   },  
   Haze: {
     iconName: "weather-hazy",
-    gradient: ["#8e9eab", "#eef2f3"],
-    mention: ""
+    gradient: ["#4DA0B0", "#D39D38"],
+    title: "Haze",
+    subtitle: "Just don't go outside."
   },
   Dust: {
     iconName: "weather-hazy",
-    gradient: ["#636363", "#a2ab58"],
-    mention: ""
+    gradient: ["#4DA0B0", "#D39D38"],
+    title: "",
+    subtitle: ""
   },
   Fog: {
     iconName: "weather-fog",
     gradient: ["#8e9eab", "#eef2f3"],
-    mention: ""
+    title: "",
+    subtitle: ""
   },
   Sand: {
     iconName: "weather-hazy",
     gradient: ["#666600", "#999966"],
-    mention: ""
+    title: "",
+    subtitle: ""
   },
   Ash: {
     iconName: "weather-hazy",
     gradient: ["#606c88", "#3f4c6b"],
-    mention: ""
+    title: "",
+    subtitle: ""
   },
   Squall: {
     iconName: "weather-hail",
     gradient: ["#0f0c29", "#504b83", "#44445e"],
-    mention: ""
+    title: "",
+    subtitle: ""
   },
   Tornado: {
     iconName: "weather-tornado",
     gradient: ["#000000", "#777777", "#333333"],
-    mention: ""
+    title: "",
+    subtitle: ""
   },
   Clear: {
     iconName: "weather-sunny",
-    gradient:  ["#f12711", "#f5af19"],
-    mention: ""
+    gradient:  ["#FF7300", "#FEF253"],
+    title: "",
+    subtitle: ""
   },
   Clouds: {
     iconName: "weather-cloudy",
-    gradient: ["#2c3e50", "#bdc3c7"],
-    mention: ""
+    gradient: ["#D7D2CC", "#304352"],
+    title: "",
+    subtitle: ""
   }
 };
 
@@ -99,8 +114,13 @@ export default function Weather({temp, condition}) {
           <MaterialCommunityIcons name="temperature-celsius" size={36} color="white" />
         </Text>
       </View>
-      <View style={styles.halfContainer}>
-
+      <View style={{...styles.halfContainer, ...styles.textContainer}}>
+        <Text style={styles.title}>
+          {weatherOptions[condition].title}
+        </Text>
+        <Text style={styles.subtitle}>
+          {weatherOptions[condition].subtitle}
+        </Text>
       </View>
     </LinearGradient>
   );
@@ -125,28 +145,28 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-
   temp: {
     fontSize: 36,
     fontWeight: "600",
     color: 'white'
   },
-
   halfContainer: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center"
   },
-
   title: {
     color: 'white',
-    fontWeight: "500",
+    fontWeight: "300",
     fontSize: 36,
   },
-
   subtitle: {
     color: 'white',
-    fontWeight: "300",
+    fontWeight: "700",
     fontSize: 24,
   },
+  textContainer: {
+    paddingHorizontal: 20,
+    alignItems: "flex-start",
+  }
 });
